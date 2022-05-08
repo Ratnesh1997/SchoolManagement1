@@ -1,0 +1,50 @@
+﻿@model SchoolManagement.Models.ImageUpload
+<div class="row text-center">
+    <div class="col-md-6">
+        <img src="@Model.Image" class="rounded-circle" style="width:150px;">
+    </div>
+    <div class="col-md-6">
+        <lable>Name :- @Model.Name</lable>
+        <label>Contact:- @Model.Contact </label>
+        <lable>Address:- @Model.Address</lable>
+    </div>
+    </div>
+<!-- Section: Design Block -->
+@*<section class=" text-center text-lg-start">
+    <style>
+    .rounded-t-5 {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+
+      .rounded-bl-lg-5 {
+        border-bottom-left-radius: 0.5rem;
+      }
+    
+    </style>
+    <div class="card mb-3">
+        <div class="row g-0 d-flex align-items-center">
+            <div class="col-lg-4 d-none d-lg-flex">
+                <img src="@Model.Image" alt="Trendy Pants and Shoes" class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+            </div>
+            <div class="col-lg-8">
+                <div class="card-body py-5 px-md-5">
+
+                    <form>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example1">@Model.Name</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example2">@Model.Contact</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example2">@Model.Address</label>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>*@

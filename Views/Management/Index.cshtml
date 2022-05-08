@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SchoolManagement.Models.ImageUpload>
+@using SchoolManagement.Models
+
+<div class="row">
+    @foreach (var items in Model)
+    {
+        <div class="card" style="width: 22rem;">
+            <a href="#" class="edit" onclick="Bind(@items.Id)"><img src="@items.Image" class="card-img-top"></a>
+            <div class="card-body text-center">
+                <h class="h3">@items.Name</h>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="bindrecord" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-bottom" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Teachers</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="bindingdata">
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    var Bind = function (id) {
+        var url = "../Management/GetById?id=" + id;
+        $("#bindingdata").load(url, function () {
+            $("#bindrecord").modal("show");
+        });
+
+    };
+</script>
